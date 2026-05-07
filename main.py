@@ -14,30 +14,35 @@
 #  shu fayllar buyicha ishlaymiz bollar
 
 
-def asosiy_menyu():
-    """Dasturning asosiy menyusini ko'rsatadi"""
+from auth import login, register
+from products import show_products, add_product
+
+
+def main_menu():
     while True:
-        separator()
-        buyumlar("🛒  TEXNOMART - Elektronika Do'koni")
-        separator()
-        menyu_chiqar([
-            "Mahsulotlar",
-            "Savatcha",
-            "Buyurtmalar",
-            "Foydalanuvchi",
-            "Chiqish",
-        ])
+        print("\n==== TEXNOMART DASTURI ====")
+        print("1. Login")
+        print("2. Ro'yxatdan o'tish")
+        print("3. Mahsulotlar ro'yxati")
+        print("4. Mahsulot qo'shish")
+        print("0. Chiqish")
 
-        tanlov = tanlov_ol(1, 5)
+        choice = input("Tanlang: ")
 
-        if tanlov == 1:
-            mahsulotlar_menyusi()
-        elif tanlov == 2:
-            savat_menyusi()
-        elif tanlov == 3:
-            buyurtma_menyusi()
-        elif tanlov == 4:
-            foydalanuvchi_menyusi()
-        elif tanlov == 5:
-            rang("\n✅  Xayr! Yana keling!", "yashil")
+        if choice == "1":
+            login()
+        elif choice == "2":
+            register()
+        elif choice == "3":
+            show_products()
+        elif choice == "4":
+            add_product()
+        elif choice == "0":
+            print("Dasturdan chiqildi!")
             break
+        else:
+            print("Noto‘g‘ri tanlov. Qayta urinib ko‘ring.")
+
+
+if __name__ == "__main__":
+    main_menu()
