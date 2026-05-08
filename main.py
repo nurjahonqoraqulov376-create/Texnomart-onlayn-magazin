@@ -1,16 +1,3 @@
-# texnomart/
-# ├── main.py                        ← Dastur kirish nuqtasi
-# ├── models/
-# │   └── db.py                      ← JSON fayl orqali ma'lumot saqlash
-# ├── services/
-# │   ├── mahsulot_service.py        ← Mahsulot CRUD funksiyalari
-# │   ├── savat_service.py           ← Savatcha funksiyalari
-# │   ├── buyurtma_service.py        ← Buyurtma funksiyalari
-# │   └── foydalanuvchi_service.py   ← Ro'yxat/kirish funksiyalari
-# └── utils/
-#     ├── chiqish.py                 ← Rangli terminal chiqishi, jadval
-#     └── menu.py                    ← Menyu va kiritish yordamchilari
-
 #  shu fayllar buyicha ishlaymiz bollar
 
 
